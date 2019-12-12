@@ -7,7 +7,7 @@ let window, menu;
 app.on('ready', function(){
     window = new BrowserWindow({});
     window.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'src/index.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -33,6 +33,9 @@ app.on('ready', function(){
                     }
                 }
             ]
+        },
+        {
+            label: 'Info'
         }
     ]);
     //add menu to application
