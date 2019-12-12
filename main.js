@@ -3,7 +3,7 @@ const path = require('path');
 const url = require('url');
 
 
-let window;
+let window, menu;
 app.on('ready', function(){
     window = new BrowserWindow({});
     window.loadURL(url.format({
@@ -11,4 +11,17 @@ app.on('ready', function(){
         protocol: 'file:',
         slashes: true
     }));
+    //create menu
+    menu = Menu.buildFromTemplate([
+        {
+            label: 'Menu',
+            submenu: [
+                {label: 'Adjust Notification Value'},
+                {label: 'CoinMarketCap'},
+                {label: 'Exit'}
+            ]
+        }
+    ]);
+    //add menu to application
+    Menu.setApplicationMenu(menu);
 });
