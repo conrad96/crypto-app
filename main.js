@@ -17,12 +17,14 @@ app.on('ready', function(){
             label: 'Menu',
             submenu: [
                 {label: 'Adjust Notification Value'},
+                {type: 'separator'},
                 {
                     label: 'CoinMarketCap',
                     click(){
                         shell.openExternal('http://coinmarketcap.com');
                     }
                 },
+                {type: 'separator'},
                 {
                     label: 'Exit',
                     click(){
