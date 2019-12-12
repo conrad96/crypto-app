@@ -18,7 +18,13 @@ app.on('ready', function(){
             submenu: [
                 {label: 'Adjust Notification Value'},
                 {label: 'CoinMarketCap'},
-                {label: 'Exit'}
+                {
+                    label: 'Exit',
+                    click(){
+                        //action
+                        app.quit();
+                    }
+                }
             ]
         }
     ]);
